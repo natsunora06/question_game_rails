@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>問題一覧</h1>
+
+<table>
+  <!--<thead>-->
+    <!--<tr>-->
+      <!--<th>問題</th>-->
+      <!--&lt;!&ndash;<th>answer_id</th>&ndash;&gt;-->
+      <!--<th colspan="3"></th>-->
+    <!--</tr>-->
+  <!--</thead>-->
+  <tbody>
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.question %></td>
+      <td><%= link_to '解答', question %></td>
+      <td><%= link_to '問題編集', edit_question_path(question) %></td>
+
+
+      <td><%= link_to '削除', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+
+
+</table>
+
+<br>
+
+<%= link_to '解答履歴', answer_histories_path %>
+<%= link_to '新規問題追加', new_question_path %>

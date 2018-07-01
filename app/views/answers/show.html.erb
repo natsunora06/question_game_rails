@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>あたなの選んだ解答はこれ</p>
+
+<p>
+  <strong>解答:</strong>
+  <%= @answer.answer %>
+</p>
+
+<p>
+  <strong>問題番号:</strong>
+  <%= @answer.question_id %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

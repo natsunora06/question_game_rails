@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>解答履歴</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>問題番号</th>
+      <th>質問履歴</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answer_histories.each do |answer_history| %>
+      <tr>
+        <td><%= answer_history.question_id %></td>
+        <td><%= answer_history.answer_id %></td>
+        <td><%= link_to 'Show', answer_history %></td>
+        <td><%= link_to 'Edit', edit_answer_history_path(answer_history) %></td>
+        <td><%= link_to 'Destroy', answer_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '問題一覧', questions_path %>
+<%= link_to '新規解答追加', new_answer_history_path %>

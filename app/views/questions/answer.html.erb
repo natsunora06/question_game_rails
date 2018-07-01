@@ -1,0 +1,11 @@
+<h1>はんぺん</h1>
+
+<p>問題：<%= @question.question %></p>
+
+<p>選択した番号：<%= @answer.answer %></p>
+
+<% if @question.answer_id == @answer.id%>
+  <h4>正解です</h4>
+  <% else%>
+  <h4>不正解です</h4>
+<% end %>

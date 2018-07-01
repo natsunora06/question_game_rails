@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>問題番号:</strong>
+  <%= @answer_history.question_id %>
+  <%= @question %>
+
+</p>
+
+<p>
+  <strong>解答番号:</strong>
+  <%= @answer_history.answer_id %>
+  <%= @answer %>
+
+</p>
+
+
+
+<%= link_to 'Edit', edit_answer_history_path(@answer_history) %> |
+<%= link_to 'Back', answer_histories_path %>
